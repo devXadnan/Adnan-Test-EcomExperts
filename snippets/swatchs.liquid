@@ -98,7 +98,7 @@ for (const img in imgJSON) {
         }
     }
 }
-console.log('This is for images:', imgJSON);
+
 
 const colorRaw = JSON.stringify("{{color_file}}");
 const colorSplit = colorRaw.split(/[,]/).map(col => col.replace(/[\"\s{}]/g, '')).map(s => s.split(':'));
@@ -114,7 +114,7 @@ for (const color in colorJSON) {
         swatchColor.style.backgroundColor = val;
     }
 }
-console.log('This is for colors:', colorJSON);
+
 
 labels.forEach((label) => {
     if (label.style.backgroundColor == '') {
