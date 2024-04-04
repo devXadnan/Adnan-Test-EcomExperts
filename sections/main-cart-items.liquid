@@ -449,10 +449,10 @@
     </form>
   </div>
 </cart-items>
-<script>
-  const MainProduct = document.querySelector('a[href*=/cart/change?id=47968835535139]');
-  const GiftProduct = document.querySelector('a[href*=/cart/change?id=47839832015139]');
-  if(MainProduct && GiftProduct){
+ <script>
+   const MainProduct = document.querySelector('a[href*="/cart/change?id=48328959852836"]');
+   const GiftProduct = document.querySelector('a[href*="/cart/change?id=45197926859044"]');
+   if(MainProduct && GiftProduct){
       MainProduct.onclick =  async (event) => {
 
           event.preventDefault();
@@ -463,22 +463,23 @@
           
           let params = GiftProduct.getAttribute('href').split('/cart/change?id=')[1];
           let lineItemKey = params.split('&')[0];
-
-
-        let updates = {
-          [MainProductItemKey]: 0,
-          [lineItemKey]: 0
-        };
-        await fetch(window.Shopify.routes.root + 'cart/update.js', {
+          
+      
+          let updates = {
+              [MainProdctItemKey]: 0,
+              [lineItemKey]: 0
+          };
+          await fetch(window.Shopify.routes.root + 'cart/update.js', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json'
             },
             body: JSON.stringify({ updates })
           })
-        window.location.replace(window.Shopify.routes.root + 'cart');
+         window.location.replace(window.Shopify.routes.root + 'cart');
       }
-</script> 
+   }
+ </script>
 {% schema %}
 {
   "name": "t:sections.main-cart-items.name",
