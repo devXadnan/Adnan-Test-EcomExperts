@@ -65,7 +65,7 @@
           {%- render 'gift-card-recipient-form', product: product, form: form, section: section -%}
         {%- endif -%}
        <!-- hide add tot cart button/ buy button for soft winter product -->
-        {% unless product.handle = 'dark-winter-jacket' %}
+        {% unless product.handle == 'dark-winter-jacket' %}
         <div class="product-form__buttons">
           {%- liquid
             assign check_against_inventory = true
