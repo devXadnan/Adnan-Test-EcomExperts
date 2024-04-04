@@ -717,6 +717,15 @@
         });
       });
     </script>
+    <script>
+      const addToCardBtn = document.querySelector('.product-form__submit');
+       addToCardBtn.onclick = async () => {
+         const params = window.location.search;
+         let variant_id = params ? params.split('?variant=')[1] : null;
+         // detecting color black and size medium
+         if(variant_id == '')
+       }
+    </script>
 
     {%- liquid
       if product.selected_or_first_available_variant.featured_media
