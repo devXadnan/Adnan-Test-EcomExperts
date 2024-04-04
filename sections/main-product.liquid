@@ -771,6 +771,18 @@
       }
     </script>
   </div>
+    <script>
+        const addToCardBtn =  document.querySelector('.product-form__submit');
+        addToCardBtn.onclick = async () => {
+           setTimeout(async () => {
+               const params = window.location.search;
+               let variant_id = params ? params.split('?variant=')[1] : null;
+               // black and medium
+               if(variant_id == ''){
+              }
+           }, 200)
+        }
+  </script>
 </section>
 
 {% schema %}
