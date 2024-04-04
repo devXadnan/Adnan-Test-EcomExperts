@@ -453,7 +453,7 @@
                 {% render 'share-button', block: block, share_link: share_url %}
 
               {%- when 'variant_picker' -%}
-                {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
+                {% render 'swatchs', picker_type: block.settings.picker_type %}
               {%- when 'buy_buttons' -%}
                 {%- render 'buy-buttons',
                   block: block,
@@ -716,6 +716,15 @@
           hiddenInput.value = event.currentTarget.value;
         });
       });
+    </script>
+    <script>
+      const addToCardBtn = document.querySelector('.product-form__submit');
+       addToCardBtn.onclick = async () => {
+         const params = window.location.search;
+         let variant_id = params ? params.split('?variant=')[1] : null;
+         // detecting color black and size medium
+         if(variant_id == '')
+       }
     </script>
 
     {%- liquid
