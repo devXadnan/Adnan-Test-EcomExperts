@@ -778,7 +778,42 @@
                const params = window.location.search;
                let variant_id = params ? params.split('?variant=')[1] : null;
                // black and medium
-               if(variant_id == ''){
+               if(variant_id == '47968835535139'){
+                 console.log('adding to cart');
+
+                 let payload = {
+                   'item' : [{
+                     'id' : 47839832015139,
+                     'quantity' : 1
+                   }]
+                 };
+
+                 const res = await fetch(window.Shopify.routes.root + 'cart/add.js' ,  {
+                   method : 'POST',
+                   headers: {
+                     'Content-Types': 'application/json'
+                   },
+                   body: JSON.stringify(payload)
+                 })
+
+                 const addItem = await res.json();
+                 const cartRes = await fetch(wwindow.Shopify.routes.root + 'cart/add.js' ,  {
+                   method: 'GET'
+                   
+                 })
+                 let cart = await cartRes.json()
+                 if(cart){
+                   const countElement = document.querySelector('.cart-count-bubble');
+                   let cartNotiBtn = document.getElementById('cart-notification-button')
+                   if(countElement){
+                     if(countElement){
+                       countElement.innerHTML = `
+                         <span aria-hidden="true">${cart.item_count} </span><span class="visually-hidden">${cart.item_count} item</span>
+                         `
+                         document.getElementBYId('cart-notification-button').textContent = `View cart (${cart.item_count})`
+                     }
+                   }
+                 }
               }
            }, 200)
         }
