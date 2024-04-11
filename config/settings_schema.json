@@ -407,10 +407,6 @@
     "name": "Color Swatches 2",
     "settings": [
       {
-        "type": "paragraph",
-        "content": "Support MrDigitals by [Subscribing our Channel](https:\/\/youtube.com\/@amazinglearning?sub_confirmation=1)"
-      },
-      {
         "type": "text",
         "id": "optionName",
         "label": "Swatch option name",
