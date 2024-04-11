@@ -23,7 +23,7 @@
         "variant_picker_wTbkHe": {
           "type": "variant_picker",
           "settings": {
-            "picker_type": "new_swatch",
+            "picker_type": "button",
             "swatch_shape": "circle"
           }
         },
