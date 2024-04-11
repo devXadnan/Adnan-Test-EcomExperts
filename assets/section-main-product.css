@@ -941,7 +941,7 @@ a.product__text {
 }
 
 .thumbnail-list_item--variant:not(:first-child) {
-  display: none;
+  /* display: none; */
 }
 
 @media screen and (min-width: 990px) {
