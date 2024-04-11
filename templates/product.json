@@ -24,7 +24,7 @@
           "type": "variant_picker",
           "repeater": "{{ product.metafields.custom.color.value }}",
           "settings": {
-            "picker_type": "dropdown",
+            "picker_type": "button",
             "swatch_shape": "circle"
           }
         },
