@@ -24,7 +24,7 @@
           "type": "variant_picker",
           "settings": {
             "picker_type": "new_swatch",
-            "swatch_shape": "square"
+            "swatch_shape": "circle"
           }
         },
         "quantity_selector": {
