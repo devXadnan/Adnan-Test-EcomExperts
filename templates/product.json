@@ -25,7 +25,7 @@
           "repeater": "{{ product.metafields.custom.color.value }}",
           "settings": {
             "picker_type": "dropdown",
-            "swatch_shape": "none"
+            "swatch_shape": "circle"
           }
         },
         "quantity_selector": {
