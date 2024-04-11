@@ -20,12 +20,11 @@
           "settings": {
           }
         },
-        "variant_picker": {
+        "variant_picker_wTbkHe": {
           "type": "variant_picker",
-          "repeater": "{{ product.metafields.custom.color.value }}",
           "settings": {
             "picker_type": "dropdown",
-            "swatch_shape": "none"
+            "swatch_shape": "square"
           }
         },
         "quantity_selector": {
@@ -56,7 +55,7 @@
         "vendor",
         "title",
         "price",
-        "variant_picker",
+        "variant_picker_wTbkHe",
         "quantity_selector",
         "buy_buttons",
         "description",
