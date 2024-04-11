@@ -23,7 +23,7 @@
         "variant_picker_wTbkHe": {
           "type": "variant_picker",
           "settings": {
-            "picker_type": "dropdown",
+            "picker_type": "new_swatch",
             "swatch_shape": "square"
           }
         },
