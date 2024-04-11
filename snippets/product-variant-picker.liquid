@@ -55,6 +55,9 @@
           <label class="form__label" for="Option-{{ section.id }}-{{ forloop.index0 }}">
             {{ option.name }}
           </label>
+<select id="product-form__input product-form__input--dropdown" name="Size">
+      <option value="{{ variant.id }}">{{ variant.title }}</option>
+</select>
           <div class="select">
             {%- if picker_type == 'swatch_dropdown' -%}
               <span
