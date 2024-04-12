@@ -75,6 +75,7 @@
               assign quantity_rule_soldout = true
             endif
           -%}
+          {% unless product.handle == 'dark-winter-jacket' %}
           <button
             id="ProductSubmitButton-{{ section_id }}"
             type="submit"
@@ -96,6 +97,7 @@
           {%- if show_dynamic_checkout -%}
             {{ form | payment_button }}
           {%- endif -%}
+          {% endunless %}
         </div>
       {%- endform -%}
     </product-form>
